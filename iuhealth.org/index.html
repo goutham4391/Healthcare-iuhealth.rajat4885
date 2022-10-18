@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from iuhealth.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Oct 2022 07:26:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"556136417",accountID:"2395139",trustKey:"2395139",xpid:"VgUOVFdQARAFUVdTBwMDXlI=",licenseKey:"1f6c0002aa",applicationID:"556102486"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(31),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(32),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),S=t(15),P=t(10),M=t("ee"),C=M.get("tracer"),N=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),P.on(p,r),M.on(d,o),b.on(l,o),P.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),S.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),C.buffer([u,"no-"+u]),P.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(P,"new-jsonp"),a(P,"jsonp-end"),a(P,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,N(!0)),w[v]("load",i,N(!0)),w[v]("popstate",function(){i(0,U>1)},N(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(32),a=t(31);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(31),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(28),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=t(25).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;if("string"==typeof i?n=i:"object"==typeof i&&i instanceof y?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n),"data"!==this.params.protocol){var s=(""+(i&&i instanceof y&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("index.html")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(31),s=t(32),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(33);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var o=[r],i=a({});i&&o.push(i),l("lcp",o)}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,l("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),l("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,p,l=t("handle"),h=t("loader"),m=t(30),v=t(23),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(o);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}p=new PerformanceObserver(i);try{p.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],28:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(t)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],29:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],30:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],31:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],32:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],33:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(31),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https:///")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(26),s=t("handle"),c=t(31),f=t("ee"),u=t(29),d=t(21),p=t(23),l=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(27),m[v]?(m[v]("DOMContentLoaded",i,p(!1)),h[v]("load",r,p(!1))):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(32),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="2" property="algolia:craftId">
+    <meta content="Home" property="algolia:title">
+    <meta content="" property="algolia:description">
+  
+  <title>IU Health</title>
+<meta name="generator" content="SEOmatic"><meta name="keywords" content="Indiana University Health,Hospital,Healthcare"><meta name="description" content="Indiana University Health is changing healthcare for the better. We bring together the state&#039;s most highly skilled doctors with a personalized approach to care."><meta name="referrer" content="no-referrer-when-downgrade"><meta name="robots" content="all"><meta content="en_US" property="og:locale"><meta content="IU Health" property="og:site_name"><meta content="website" property="og:type"><meta content="https://iuhealth.org/" property="og:url"><meta content="IU Health" property="og:title"><meta content="Indiana University Health is changing healthcare for the better. We bring together the state&#039;s most highly skilled doctors with a personalized approach to care." property="og:description"><meta content="https://cdn.iuhealth.org/global/_1200x630_crop_center-center_82_none/iuh-logo-facebook-open-graph.jpg?mtime=1603905394" property="og:image"><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><meta content="Indiana University Health" property="og:image:alt"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@IU_Health"><meta name="twitter:creator" content="@IU_Health"><meta name="twitter:title" content="IU Health"><meta name="twitter:description" content="Indiana University Health is changing healthcare for the better. We bring together the state&#039;s most highly skilled doctors with a personalized approach to care."><meta name="twitter:image" content="https://cdn.iuhealth.org/global/_800x418_crop_center-center_82_none/iuh-logo-facebook-open-graph.jpg?mtime=1603905394"><meta name="twitter:image:width" content="800"><meta name="twitter:image:height" content="418"><meta name="twitter:image:alt" content="Indiana University Health">
+
+<meta name="indexedName" content="">
+
+      <link rel="canonical" href="index.html">
+  
+    <style>[x-cloak]{display:none!important}</style>
+
+  <link rel="stylesheet" href="../cdn.iuhealth.org/bundle/main.bundle9a82.css?v=12c2e03">
+
+  <link rel="shortcut icon" href="https://cdn.iuhealth.org/global/favicon.ico">
+  <link rel="apple-touch-icon" href="../cdn.iuhealth.org/global/icon-1024x1024.png">
+  <link rel="manifest" href="manifest.json">
+
+  
+  
+  <meta name="theme-color" content="#981e32">
+
+  </head>
+<body class="">
+  <a
+    class="
+      sr-only
+      focus:not-sr-only focus:inline-block
+      focus:p-2 focus:mt-2 focus:ml-5 focus:mb-2
+      focus:rounded-sm
+    "
+    href="#main-content"
+    tabindex="1"
+  >
+    Skip to Main Content
+  </a>
+
+  <div data-browser-deprecation style="display: none">
+  <script>
+    if (window.navigator.userAgent.match(/(MSIE|Trident)/)) {
+      document.querySelector('[data-browser-deprecation]').style.display = 'block';
+    }
+  </script>
+
+  <div class="bg-red text-white text-sm font-bold p-4 flex items-center gap-2">
+    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+
+    <p class="m-0">
+      Your browser is out of date and no longer supported. Consider using a newer browser such as <a target="_blank" rel="noreferrer noopener" class="text-white" href="https://www.google.com/chrome/">Chrome</a>, <a target="_blank" rel="noreferrer noopener" class="text-white" href="https://www.microsoft.com/en-us/edge">Edge</a>, or <a target="_blank" rel="noreferrer noopener" class="text-white" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.
+    </p>
+  </div>
+</div>
+
+            
+                                    
+      
+  <section class="AlertWindow" data-alert-window>
+    <section class="AlertWindow__pane">
+      <button class="AlertWindow__close" data-alert-window-trigger aria-label="Close">&times;</button>
+              <div class="AlertWindow__item">
+          <h3 class="AlertWindow__heading">COVID-19: Testing, Visitor Details & Vaccines: Find the latest updates</h3>
+          <ul><li><strong>COVID-19 Vaccines: </strong>Find the latest information and how to schedule your <strong><a href="covid19/covid-19-vaccine.html">COVID-19 vaccine</a></strong>.</li><li><strong>Visitor Guidelines: </strong>Masks are required in all our facilities. Find our <strong><a href="covid19/visitor-appointment-updates.html">latest visitor guidelines</a></strong>.</li><li><strong>COVID-19 Testing: </strong>Visit the state website to find a <strong><a href="https://www.coronavirus.in.gov/2524.htm" target="_blank">public testing site</a></strong> near you. Please do not go to the ER for a COVID-19 test.<br></li></ul>
+<p>For more information, visit our <strong><a href="covid19.html">COVID-19 Resource Center</a>.</strong><strong><br></strong></p>
+<h4>COVID-19: Pruebas, detalles sobre visitantes y vacunas: encuentre las actualizaciones más recientes</h4>
+<ul><li><strong>Vacunas COVID-19:</strong> Encuentre la información más reciente y cómo programar su <strong><a href="vacuna-contra-la-covid-19.html">vacuna COVID-19</a></strong>.</li><li><strong>Normas para visitantes:</strong> Se requiere el uso de mascarillas en todas nuestras instalaciones. Encuentre nuestras <strong><a href="find-medical-services/coronavirus-es.html">normas más recientes para visitantes</a></strong>.</li><li><strong>Pruebas de COVID-19:</strong> Visite el sitio web del estado para encontrar un <strong><a href="https://www.coronavirus.in.gov/2524.htm" target="_blank">sitio de prueba público</a></strong> cerca de usted. Por favor, no vaya a Emergencias para hacerse una prueba de COVID-19.</li></ul>
+<ul></ul>
+        </div>
+          </section>
+  </section>
+
+<header class="Header Header--noAccent Header--has-alerts" data-header>
+  <div class="Header__small">
+          <div class="Header__small-alerts-wrap">
+        <a data-alert-window-trigger class="AlertIndicator has-multiple Header__small-alerts">
+  <span class="relative h-3 w-3 mr-1 md:mr-2">
+    <svg class="h-5 w-5 text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+
+  </span>
+  <span class="AlertIndicator__total hidden-at-md u-pl-half">
+    1 Alert
+  </span>
+  <span class="AlertIndicator__heading hidden-until-md">
+    COVID-19: Testing, Visitor Details & Vaccines
+  </span>
+  <p class="AlertIndicator__desc">
+    Find the latest updates
+  </p>
+  <p class="AlertIndicator__more">
+    <span class="AlertIndicator__label">View Details</span>
+    <span class="inline-block align-middle">
+      <svg class="h-3 w-3 rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+
+    </span>
+  </p>
+</a>
+
+      </div>
+    
+    <div class="Header__small-top-bar">
+              <span class="Header__small-logo">
+          <img src="../iuhealth.org/images/logo.jpeg" alt="IU Health">
+        </span>
+              <div class="Header__search-button-div">
+          <a class="Header__small-search-btn" href="https://iuhealth.org/search">Search<span class="Icon Icon--search Header__small-search-icon"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#2574b1"><path d="M10.84 6.5c0-2.4-1.94-4.34-4.34-4.34S2.16 4.1 2.16 6.5s1.94 4.34 4.34 4.34 4.34-1.94 4.34-4.34zm2.16 0c0 3.6-2.9 6.5-6.5 6.5S0 10.1 0 6.5 2.9 0 6.5 0 13 2.9 13 6.5z"/><path d="M15.7 14.2l-3.9-3.9c-.4-.4-1.08-.4-1.5 0-.4.43-.4 1.1 0 1.5l3.9 3.9c.4.4 1.08.4 1.5 0 .4-.43.4-1.1 0-1.5z"/></g></svg></span></a>
+        </div>
+    </div>
+
+    <div class="Header__small-bottom-bar" data-mobile-navbar>
+      <div class="Header__small-help-btn">
+        <div class="DropdownButton" data-dropdown-button>
+  <button class="DropdownButton__toggle u-vis-mob">I want to...<span class="Icon Icon--caret-down Header__small-help-icon"><svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h16L8 12z" fill-rule="evenodd"/></svg></span></button>
+
+  <ul class="DropdownButton__menu">
+          <li><a class="DropdownButton__link" href="find-providers.html">Find Providers</a></li>
+          <li><a class="DropdownButton__link" href="find-medical-services.html">Medical Services</a></li>
+          <li><a class="DropdownButton__link" href="find-locations.html">Locations</a></li>
+          <li><a class="DropdownButton__link is-featured" href="get-care-now.html"><span class="Icon Icon--heart-white-no-circle u-pr-half"><svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M7.06600036,0.93152718 C4.3133119,-1.47720184 0,1.1192383 0,4.90852025 C0,5.47007772 0.155579179,6.06492289 0.420353676,6.67060136 L1.02508317,7.62609602 L3.45250484,7.62609602 L5.00578416,3.94613162 C5.06163809,3.81376873 5.18861389,3.72690557 5.33008461,3.72434502 C5.48102541,3.72237533 5.60143018,3.80431427 5.66172916,3.93470747 L7.41677824,7.72694399 L8.02112121,5.04797399 C8.05861482,4.88133857 8.2041442,4.76355133 8.37170584,4.76355133 C8.3718991,4.76355133 8.3720924,4.76355133 8.3724789,4.76355133 L12.260992,4.77103615 C12.4596695,4.77123313 12.6202736,4.93570192 12.6200804,5.13838262 C12.6196938,5.34066934 12.4587032,5.50435024 12.260219,5.50435024 C12.2600257,5.50435024 12.2598324,5.50435024 12.2596392,5.50435024 L8.65812614,5.49765331 L7.88525516,8.92352824 C7.85104709,9.07578493 7.72561741,9.18923885 7.5731305,9.20598119 C7.56018169,9.20735999 7.54723283,9.20814787 7.53447727,9.20814787 C7.39648534,9.20814787 7.26912299,9.12719376 7.2092105,8.99798236 L5.35153718,4.98356528 L4.02012727,8.13801743 C3.96350033,8.27254701 3.83343224,8.35980408 3.68964234,8.35980408 L1.48930823,8.35980408 L1.97382624,9.12542105 C4.06883032,11.7449065 7.07952897,14 7.07952897,14 C7.07952897,14 7.44248265,13.7218804 8.00256769,13.24758 L8.61019616,12.7208859 C10.6485733,10.9152747 14,7.54553587 14,4.90852025 C14,1.1192383 10.1872472,-1.43130815 7.06600036,0.93152718 Z" transform="translate(1 1)" fill="#FFF" fill-rule="nonzero"/></svg></span>Get Care now</a></li>
+          <li><a class="DropdownButton__link is-featured" href="schedule-an-appointment.html"><span class="Icon Icon--schedule-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M4.76 8.72v-.05c.05-.1.12-.18.2-.22.1-.04.2-.06.3-.06h.3c.08 0 .16.1.23.3 0 .1.1.3.1.6v1s0 .7-.07 1c-.04.2-.1.4-.16.6l-.3.3h-.3c-.1 0-.2-.1-.3-.1-.1-.1-.17-.2-.24-.3l-.15-.6c-.04-.3-.06-.6-.06-1s0-.8.05-1c.04-.3.1-.5.17-.6h.05zm-1.64-5.3H1.28C.58 3.4.04 3.94.04 4.6v.74H2.9l-.03-.4c0-.54.1-1.05.25-1.53zm9.66 0h1.84c.7 0 1.25.53 1.25 1.18v.74H13c.03-.14.03-.27.03-.4 0-.54-.1-1.05-.25-1.53zm.04 2.9h3.05v7.92c0 .66-.56 1.2-1.25 1.2H1.28c-.7 0-1.24-.54-1.24-1.2v-7.9h3.04c.15.46.37.9.65 1.3l-.23.25c-.22.2-.38.6-.5 1s-.18.8-.18 1.4c0 .5.06 1 .18 1.4.12.4.28.7.5 1 .2.3.47.5.76.6.3.1.63.2 1 .2.35 0 .68-.1.98-.2.3-.2.55-.4.77-.7.3-.3.4-.6.5-1 .2-.4.2-.9.2-1.4v-.5H8c.75 0 1.5-.2 2.14-.5V12H8.7v1.35h4.36v-1.3h-1.18V8c.42-.5.75-1.07.94-1.7zM3.56 3.4h8.85"/><path d="M13.03 4.93c0 2.7-2.27 4.87-5.08 4.87-2.8 0-5.08-2.18-5.08-4.87C2.87 2.25 5.14.07 7.95.07c2.8 0 5.08 2.18 5.08 4.86zm-1 0c0-2.15-1.83-3.9-4.08-3.9s-4.07 1.75-4.07 3.9c0 2.16 1.82 3.9 4.07 3.9s4.07-1.74 4.07-3.9z"/><path d="M7.42 7.36h1.04V2.5H7.42z"/><path d="M5.4 5.42h5.08v-1H5.4z"/></g></svg></span>Schedule an Appointment</a></li>
+          <li><a class="DropdownButton__link is-featured" href="pay-a-bill.html"><span class="Icon Icon--pay-bill-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M5.03 7.64C4.2 6.87 3.67 5.8 3.67 4.62 3.67 2.27 5.75.36 8.3.36c2.4 0 4.35 1.64 4.63 3.75l-.1-.44V3.6h1.5c.7 0 1.3.42 1.55 1.03.08.14.12.3.12.47v10.74c-.58 0-.9-.12-1.16-.23-.24-.1-.42-.12-.84-.12-.4 0-.6.07-.84.17-.27.12-.57.24-1.16.24-.58 0-.9-.13-1.16-.24-.24-.1-.42-.16-.84-.16-.4 0-.6.06-.84.16-.27.12-.57.24-1.16.24-.58 0-.9-.13-1.16-.24-.23-.1-.42-.16-.84-.16-.4 0-.6.06-.83.16-.27.12-.58.24-1.17.24-.58 0-.9-.12-1.16-.23-.23-.1-.42-.16-.84-.16-.4 0-.6.1-.83.2-.27.1-.58.25-1.17.25V5.2c0-.9.75-1.6 1.67-1.6H3.8c-.08.33-.13.68-.13 1.04 0 1.18.52 2.25 1.36 3.02zm10.13 7.18h-.08c.03 0 .05.02.08.03v-.03zm-14.23 0h-.1v.04l.1-.04zM11.2 9.2h2.67V8.18H11.2V9.2zm-8.53 2.04h11.2v-1.02H2.67v1.02zm0 2.05h8.53v-1.07H2.67v1.02zm0-4.1h2.66V8.14H2.67V9.2zm9.37-4.6c0-1.9-1.67-3.4-3.73-3.4-2 0-3.7 1.5-3.7 3.4S6.3 8 8.3 8c2.1 0 3.76-1.53 3.76-3.42z"/><path d="M8.4 5.86c.42 0 1.03-.1 1.03-.5 0-.87-2.93-.16-2.93-1.7 0-.73.78-1.06 1.52-1.12V2h.6v.54c.67.08 1.3.37 1.52.92-.2.1-.4.17-.6.26-.2-.4-.78-.55-1.25-.55-.5 0-1 .13-1 .43 0 .82 2.9.18 2.9 1.7 0 .8-.8 1.18-1.6 1.24V7H8v-.47c-.82-.08-1.4-.45-1.6-1.03l.64-.27c.16.42.84.63 1.35.63"/></g></svg></span>Pay a Bill</a></li>
+          <li><a class="DropdownButton__link is-featured" href="for-providers/refer-a-patient.html"><span class="Icon Icon--refer-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M12.24 4.2v-.5h1.84c.75 0 1.36.55 1.36 1.2v1.07h-3.2c.07-.27.1-.55.1-.84 0-.32-.04-.62-.1-.92zm-8.6.08h-.2V3.7h-1.7C.97 3.7.36 4.26.36 4.9v1.07h3.28c-.05-.27-.08-.55-.08-.84 0-.3.03-.58.08-.85zm.16 2.25A4.37 4.37 0 0 0 7.95 9.5c1.85 0 3.42-1.13 4.07-2.74h3.42v7.63c0 .6-.6 1.2-1.36 1.2H8.3V9.7h-.8v5.8H1.74C1 15.52.38 15 .38 14.32v-7.6H3.8V6.5zm1.57 4.7H5.3c-.07.27-.6.48-1 .48-.38 0-.9-.2-1-.4h-.05c-.52 0-.95.4-.95.97V14c0 .1.08.17.17.17h3.68c.1 0 .17-.06.17-.15v-1.8c0-.52-.43-.94-.95-.94zm.04-1.4c0-.67-.4-1.22-1-1.22s-1.1.6-1.1 1.3.5 1.2 1.1 1.2c.6 0 1.1-.53 1.1-1.2zm7.4 1.4c-.06.27-.6.48-1 .48s-.9-.2-1-.4h-.04c-.52 0-.95.4-.95.97V14c0 .1.08.17.17.17h3.7c.1 0 .16-.06.16-.15v-1.8c0-.52-.42-.94-.94-.94zm.1-1.4c0-.67-.5-1.22-1.06-1.22-.6 0-1.1.6-1.1 1.3s.5 1.2 1.1 1.2c.6 0 1.07-.52 1.07-1.2z"/><path d="M7.9 1.2c-2.2 0-4 1.8-4 4 0 2.22 1.8 4.02 4 4.02 2.22 0 4.02-1.8 4.02-4 0-2.22-1.8-4.02-4.02-4.02m0 8.8c-2.64 0-4.8-2.15-4.8-4.8C3.1 2.57 5.27.4 7.9.4c2.65 0 4.8 2.16 4.8 4.8 0 2.65-2.15 4.8-4.8 4.8"/><path d="M8.4 3.1a.108.108 0 0 0-.14-.02.13.13 0 0 0-.08.12v.74c-.77.03-1.4.28-1.84.75-.8.8-.77 2-.77 2.1 0 0 .06.1.14.1.1 0 .2-.1.2-.2s.2-1.6 2.38-1.65v.73c0 .05.03.1.08.12.06.03.1.02.16 0l1.8-1.36.04-.1c0-.05-.03-.1-.06-.1L8.4 3.1z"/></g></svg></span>Make a Referral</a></li>
+          <li><a class="DropdownButton__link u-text-primary-red" href="https://myiuhealth.org/?_ga=2.30318335.1930817085.1505420414-161027848.1490886421" target="_blank">Log in to My IU Health<span class="Icon Icon--arrow-right Header__large-myiuh-icon"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#981E33" d="M15.8 8.02L8.3.58l-1.9 2.2 4.05 3.68H.8V9.7h9.65L6.4 13.38l1.9 2.2 7.5-7.44z" fill-rule="evenodd"/></svg></span></a></li>
+      </ul>
+</div>
+
+      </div>
+
+      <div class="Header__small-location-btn" data-geolocate></div>
+    </div>
+  </div>
+
+  <div class="Header__large">
+          <div class="Header__large-alerts-bar">
+        <a data-alert-window-trigger class="AlertIndicator has-multiple Header__large-alerts">
+  <span class="relative h-3 w-3 mr-1 md:mr-2">
+    <svg class="h-5 w-5 text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
+
+  </span>
+  <span class="AlertIndicator__total hidden-at-md u-pl-half">
+    1 Alert
+  </span>
+  <span class="AlertIndicator__heading hidden-until-md">
+    COVID-19: Testing, Visitor Details & Vaccines
+  </span>
+  <p class="AlertIndicator__desc">
+    Find the latest updates
+  </p>
+  <p class="AlertIndicator__more">
+    <span class="AlertIndicator__label">View Details</span>
+    <span class="inline-block align-middle">
+      <svg class="h-3 w-3 rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+
+    </span>
+  </p>
+</a>
+
+      </div>
+    
+          <span class="Header__large-logo  Header__large-logo--active ">
+        <img src="../iuhealth.org/images/logo.jpeg" alt="IU Health">
+      </span>
+    
+    <div class="Header__large-navigation">
+      <div class="Header__large-top-bar">
+                  <span class="Header__large-stuck-logo">
+            <img src="../iuhealth.org/images/logo.jpeg" alt="IU Health">
+          </span>
+        
+        <ul class="Header__utility-bar">
+          <li class="Header__utility-help-btn">
+            <div class="Header__large-help-btn">
+              <div class="DropdownButton Header__large-help-dropdown" data-dropdown-button>
+  <button class="DropdownButton__toggle DropdownButton__desk-visb">I want to...<span class="Icon Icon--caret-down Header__small-help-icon"><svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h16L8 12z" fill-rule="evenodd"/></svg></span></button>
+
+  <ul class="DropdownButton__menu">
+          <li><a class="DropdownButton__link" href="find-providers.html">Find Providers</a></li>
+          <li><a class="DropdownButton__link" href="find-medical-services.html">Medical Services</a></li>
+          <li><a class="DropdownButton__link" href="find-locations.html">Locations</a></li>
+          <li><a class="DropdownButton__link is-featured" href="get-care-now.html"><span class="Icon Icon--heart-white-no-circle u-pr-half"><svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M7.06600036,0.93152718 C4.3133119,-1.47720184 0,1.1192383 0,4.90852025 C0,5.47007772 0.155579179,6.06492289 0.420353676,6.67060136 L1.02508317,7.62609602 L3.45250484,7.62609602 L5.00578416,3.94613162 C5.06163809,3.81376873 5.18861389,3.72690557 5.33008461,3.72434502 C5.48102541,3.72237533 5.60143018,3.80431427 5.66172916,3.93470747 L7.41677824,7.72694399 L8.02112121,5.04797399 C8.05861482,4.88133857 8.2041442,4.76355133 8.37170584,4.76355133 C8.3718991,4.76355133 8.3720924,4.76355133 8.3724789,4.76355133 L12.260992,4.77103615 C12.4596695,4.77123313 12.6202736,4.93570192 12.6200804,5.13838262 C12.6196938,5.34066934 12.4587032,5.50435024 12.260219,5.50435024 C12.2600257,5.50435024 12.2598324,5.50435024 12.2596392,5.50435024 L8.65812614,5.49765331 L7.88525516,8.92352824 C7.85104709,9.07578493 7.72561741,9.18923885 7.5731305,9.20598119 C7.56018169,9.20735999 7.54723283,9.20814787 7.53447727,9.20814787 C7.39648534,9.20814787 7.26912299,9.12719376 7.2092105,8.99798236 L5.35153718,4.98356528 L4.02012727,8.13801743 C3.96350033,8.27254701 3.83343224,8.35980408 3.68964234,8.35980408 L1.48930823,8.35980408 L1.97382624,9.12542105 C4.06883032,11.7449065 7.07952897,14 7.07952897,14 C7.07952897,14 7.44248265,13.7218804 8.00256769,13.24758 L8.61019616,12.7208859 C10.6485733,10.9152747 14,7.54553587 14,4.90852025 C14,1.1192383 10.1872472,-1.43130815 7.06600036,0.93152718 Z" transform="translate(1 1)" fill="#FFF" fill-rule="nonzero"/></svg></span>Get Care now</a></li>
+          <li><a class="DropdownButton__link is-featured" href="schedule-an-appointment.html"><span class="Icon Icon--schedule-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M4.76 8.72v-.05c.05-.1.12-.18.2-.22.1-.04.2-.06.3-.06h.3c.08 0 .16.1.23.3 0 .1.1.3.1.6v1s0 .7-.07 1c-.04.2-.1.4-.16.6l-.3.3h-.3c-.1 0-.2-.1-.3-.1-.1-.1-.17-.2-.24-.3l-.15-.6c-.04-.3-.06-.6-.06-1s0-.8.05-1c.04-.3.1-.5.17-.6h.05zm-1.64-5.3H1.28C.58 3.4.04 3.94.04 4.6v.74H2.9l-.03-.4c0-.54.1-1.05.25-1.53zm9.66 0h1.84c.7 0 1.25.53 1.25 1.18v.74H13c.03-.14.03-.27.03-.4 0-.54-.1-1.05-.25-1.53zm.04 2.9h3.05v7.92c0 .66-.56 1.2-1.25 1.2H1.28c-.7 0-1.24-.54-1.24-1.2v-7.9h3.04c.15.46.37.9.65 1.3l-.23.25c-.22.2-.38.6-.5 1s-.18.8-.18 1.4c0 .5.06 1 .18 1.4.12.4.28.7.5 1 .2.3.47.5.76.6.3.1.63.2 1 .2.35 0 .68-.1.98-.2.3-.2.55-.4.77-.7.3-.3.4-.6.5-1 .2-.4.2-.9.2-1.4v-.5H8c.75 0 1.5-.2 2.14-.5V12H8.7v1.35h4.36v-1.3h-1.18V8c.42-.5.75-1.07.94-1.7zM3.56 3.4h8.85"/><path d="M13.03 4.93c0 2.7-2.27 4.87-5.08 4.87-2.8 0-5.08-2.18-5.08-4.87C2.87 2.25 5.14.07 7.95.07c2.8 0 5.08 2.18 5.08 4.86zm-1 0c0-2.15-1.83-3.9-4.08-3.9s-4.07 1.75-4.07 3.9c0 2.16 1.82 3.9 4.07 3.9s4.07-1.74 4.07-3.9z"/><path d="M7.42 7.36h1.04V2.5H7.42z"/><path d="M5.4 5.42h5.08v-1H5.4z"/></g></svg></span>Schedule an Appointment</a></li>
+          <li><a class="DropdownButton__link is-featured" href="pay-a-bill.html"><span class="Icon Icon--pay-bill-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M5.03 7.64C4.2 6.87 3.67 5.8 3.67 4.62 3.67 2.27 5.75.36 8.3.36c2.4 0 4.35 1.64 4.63 3.75l-.1-.44V3.6h1.5c.7 0 1.3.42 1.55 1.03.08.14.12.3.12.47v10.74c-.58 0-.9-.12-1.16-.23-.24-.1-.42-.12-.84-.12-.4 0-.6.07-.84.17-.27.12-.57.24-1.16.24-.58 0-.9-.13-1.16-.24-.24-.1-.42-.16-.84-.16-.4 0-.6.06-.84.16-.27.12-.57.24-1.16.24-.58 0-.9-.13-1.16-.24-.23-.1-.42-.16-.84-.16-.4 0-.6.06-.83.16-.27.12-.58.24-1.17.24-.58 0-.9-.12-1.16-.23-.23-.1-.42-.16-.84-.16-.4 0-.6.1-.83.2-.27.1-.58.25-1.17.25V5.2c0-.9.75-1.6 1.67-1.6H3.8c-.08.33-.13.68-.13 1.04 0 1.18.52 2.25 1.36 3.02zm10.13 7.18h-.08c.03 0 .05.02.08.03v-.03zm-14.23 0h-.1v.04l.1-.04zM11.2 9.2h2.67V8.18H11.2V9.2zm-8.53 2.04h11.2v-1.02H2.67v1.02zm0 2.05h8.53v-1.07H2.67v1.02zm0-4.1h2.66V8.14H2.67V9.2zm9.37-4.6c0-1.9-1.67-3.4-3.73-3.4-2 0-3.7 1.5-3.7 3.4S6.3 8 8.3 8c2.1 0 3.76-1.53 3.76-3.42z"/><path d="M8.4 5.86c.42 0 1.03-.1 1.03-.5 0-.87-2.93-.16-2.93-1.7 0-.73.78-1.06 1.52-1.12V2h.6v.54c.67.08 1.3.37 1.52.92-.2.1-.4.17-.6.26-.2-.4-.78-.55-1.25-.55-.5 0-1 .13-1 .43 0 .82 2.9.18 2.9 1.7 0 .8-.8 1.18-1.6 1.24V7H8v-.47c-.82-.08-1.4-.45-1.6-1.03l.64-.27c.16.42.84.63 1.35.63"/></g></svg></span>Pay a Bill</a></li>
+          <li><a class="DropdownButton__link is-featured" href="for-providers/refer-a-patient.html"><span class="Icon Icon--refer-invert u-pr-half"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#FFF" fill-rule="evenodd"><path d="M12.24 4.2v-.5h1.84c.75 0 1.36.55 1.36 1.2v1.07h-3.2c.07-.27.1-.55.1-.84 0-.32-.04-.62-.1-.92zm-8.6.08h-.2V3.7h-1.7C.97 3.7.36 4.26.36 4.9v1.07h3.28c-.05-.27-.08-.55-.08-.84 0-.3.03-.58.08-.85zm.16 2.25A4.37 4.37 0 0 0 7.95 9.5c1.85 0 3.42-1.13 4.07-2.74h3.42v7.63c0 .6-.6 1.2-1.36 1.2H8.3V9.7h-.8v5.8H1.74C1 15.52.38 15 .38 14.32v-7.6H3.8V6.5zm1.57 4.7H5.3c-.07.27-.6.48-1 .48-.38 0-.9-.2-1-.4h-.05c-.52 0-.95.4-.95.97V14c0 .1.08.17.17.17h3.68c.1 0 .17-.06.17-.15v-1.8c0-.52-.43-.94-.95-.94zm.04-1.4c0-.67-.4-1.22-1-1.22s-1.1.6-1.1 1.3.5 1.2 1.1 1.2c.6 0 1.1-.53 1.1-1.2zm7.4 1.4c-.06.27-.6.48-1 .48s-.9-.2-1-.4h-.04c-.52 0-.95.4-.95.97V14c0 .1.08.17.17.17h3.7c.1 0 .16-.06.16-.15v-1.8c0-.52-.42-.94-.94-.94zm.1-1.4c0-.67-.5-1.22-1.06-1.22-.6 0-1.1.6-1.1 1.3s.5 1.2 1.1 1.2c.6 0 1.07-.52 1.07-1.2z"/><path d="M7.9 1.2c-2.2 0-4 1.8-4 4 0 2.22 1.8 4.02 4 4.02 2.22 0 4.02-1.8 4.02-4 0-2.22-1.8-4.02-4.02-4.02m0 8.8c-2.64 0-4.8-2.15-4.8-4.8C3.1 2.57 5.27.4 7.9.4c2.65 0 4.8 2.16 4.8 4.8 0 2.65-2.15 4.8-4.8 4.8"/><path d="M8.4 3.1a.108.108 0 0 0-.14-.02.13.13 0 0 0-.08.12v.74c-.77.03-1.4.28-1.84.75-.8.8-.77 2-.77 2.1 0 0 .06.1.14.1.1 0 .2-.1.2-.2s.2-1.6 2.38-1.65v.73c0 .05.03.1.08.12.06.03.1.02.16 0l1.8-1.36.04-.1c0-.05-.03-.1-.06-.1L8.4 3.1z"/></g></svg></span>Make a Referral</a></li>
+      </ul>
+</div>
+
+            </div>
+          </li>
+          <li>
+            <div class="Header__large-location-btn" data-geolocate></div>
+          </li>
+          <li>
+            <a target="" href="https://myiuhealth.org/?_ga=2.30318335.1930817085.1505420414-161027848.1490886421" class="Header__large-myiuh-link">
+              Log in to My IU Health<span class="Icon Icon--arrow-right Header__large-myiuh-icon"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#981E33" d="M15.8 8.02L8.3.58l-1.9 2.2 4.05 3.68H.8V9.7h9.65L6.4 13.38l1.9 2.2 7.5-7.44z" fill-rule="evenodd"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a class="Header__large-search-btn" href="https://iuhealth.org/search">Search<span class="Icon Icon--search Header__large-search-icon"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="#2574b1"><path d="M10.84 6.5c0-2.4-1.94-4.34-4.34-4.34S2.16 4.1 2.16 6.5s1.94 4.34 4.34 4.34 4.34-1.94 4.34-4.34zm2.16 0c0 3.6-2.9 6.5-6.5 6.5S0 10.1 0 6.5 2.9 0 6.5 0 13 2.9 13 6.5z"/><path d="M15.7 14.2l-3.9-3.9c-.4-.4-1.08-.4-1.5 0-.4.43-.4 1.1 0 1.5l3.9 3.9c.4.4 1.08.4 1.5 0 .4-.43.4-1.1 0-1.5z"/></g></svg></span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="Header__large-bottom-bar">
+        <nav class="Header__nav">
+          <ul>
+            <li class="Header__nav-item">
+              <a href="find-providers.html">Find Providers</a>
+            </li>
+            <li class="Header__nav-item">
+              <a href="find-medical-services.html">Medical Services</a>
+            </li>
+            <li class="Header__nav-item">
+              <a href="find-locations.html">Locations</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="Header__help-options">
+          <li class="Header__help-option">
+            <a href="get-care-now.html">
+              <span class="Icon Icon--heart-circle"><svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><circle fill="#981E33" cx="8" cy="8" r="8"/><path d="M8.04714311,4.66537656 C6.08093707,2.94485583 3,4.79945593 3,7.50608589 C3,7.90719837 3.11112799,8.33208778 3.30025263,8.76471526 L3.73220227,9.44721145 L5.46607489,9.44721145 L6.57556011,6.81866545 C6.61545578,6.72412052 6.70615278,6.66207541 6.8072033,6.66024645 C6.91501815,6.65883952 7.00102156,6.71736733 7.04409226,6.81050533 L8.29769874,9.5192457 L8.7293723,7.6056957 C8.75615344,7.48667041 8.860103,7.40253667 8.97978989,7.40253667 C8.97992793,7.40253667 8.980066,7.40253667 8.98034207,7.40253667 L11.7578514,7.40788296 C11.8997639,7.40802367 12.0144811,7.52550137 12.0143431,7.6702733 C12.014067,7.81476382 11.8990737,7.93167874 11.7572993,7.93167874 C11.7571612,7.93167874 11.7570231,7.93167874 11.7568851,7.93167874 L9.18437581,7.92689522 L8.63232511,10.3739487 C8.60789078,10.4827035 8.51829815,10.563742 8.40937893,10.5757009 C8.40012978,10.5766857 8.39088059,10.5772485 8.38176948,10.5772485 C8.28320381,10.5772485 8.1922307,10.5194241 8.14943607,10.4271303 L6.82252656,7.55968948 L5.87151948,9.81286959 C5.83107167,9.90896215 5.73816589,9.97128863 5.63545881,9.97128863 L4.06379159,9.97128863 L4.40987589,10.5181579 C5.90630737,12.3892189 8.05680641,14 8.05680641,14 C8.05680641,14 8.31605904,13.8013431 8.71611978,13.4625571 L9.15014011,13.0863471 C10.6061238,11.7966248 13,9.38966848 13,7.50608589 C13,4.79945593 10.2766051,2.97763703 8.04714311,4.66537656 Z" fill="#FFF"/></g></svg>
+</span>
+              Get Care Now
+            </a>
+          </li>
+          <li class="Header__help-option">
+            <a href="schedule-an-appointment.html">
+              <span class="Icon Icon--schedule"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#981E33" width="16" height="16" rx="8"/><path d="M10.425 4.758h1.217c.377 0 .685.308.685.684v5.532a.686.686 0 0 1-.684.685H4.304a.686.686 0 0 1-.684-.685V5.442c0-.376.307-.684.684-.684h1.255" fill="#FFF"/><path fill="#981E32" d="M3.6 6.433h1.956v-.57H3.6zm6.774 0h1.972v-.57h-1.972zM6.909 8.714c0 .238-.012.43-.034.578a1.362 1.362 0 0 1-.091.345.349.349 0 0 1-.133.167.329.329 0 0 1-.323-.001.341.341 0 0 1-.133-.167 1.361 1.361 0 0 1-.091-.345 3.899 3.899 0 0 1-.034-.578c0-.238.01-.429.034-.572.022-.144.053-.255.09-.334l.015-.03a2.774 2.774 0 0 1-.537-.61 1.294 1.294 0 0 0-.15.161 1.66 1.66 0 0 0-.274.578 3.032 3.032 0 0 0-.096.807c0 .306.032.576.096.81.064.234.156.43.275.589.119.159.26.278.422.36.162.08.343.121.544.121a1.153 1.153 0 0 0 .964-.482c.12-.157.211-.354.275-.588a3.08 3.08 0 0 0 .096-.81c0-.102-.003-.2-.01-.293a2.742 2.742 0 0 1-.933-.224c.018.136.026.308.026.517m3.229 1.032V7.384a2.76 2.76 0 0 1-.974.777v1.584h-.77v.781h2.39v-.781h-.646z"/><path d="M6.875 8.142a1.26 1.26 0 0 0-.091-.334c-.038-.08-.082-.131-.133-.156a.366.366 0 0 0-.323 0 .283.283 0 0 0-.117.127c.201.17.427.31.671.418a1.789 1.789 0 0 0-.007-.055" fill="#E0E0E0"/><path d="M10.768 5.632a2.795 2.795 0 1 1-5.59 0 2.795 2.795 0 0 1 5.59 0" fill="#FFF"/><path d="M10.197 5.623a2.234 2.234 0 1 1-4.468 0 2.234 2.234 0 0 1 4.468 0" fill="#981E32"/><path fill="#FFF" d="M7.682 7.022h.57V4.227h-.57z"/><path fill="#FFF" d="M6.57 5.91h2.795v-.57H6.57z"/></g></svg></span>
+              Schedule an Appointment
+            </a>
+          </li>
+          <li class="Header__help-option">
+            <a href="pay-a-bill.html">
+              <span class="Icon Icon--pay-bill"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none"><rect fill="#981E32" width="16" height="16" rx="8"/><path d="M3.94 11.477v-6.21h8.51v6.21H3.94zM4.75 10v.65h6V10h-6zm0-1.25v.65h7v-.65h-7zm0-1.25v.65h7V7.5h-7z" fill="#FFF"/><path d="M12.663 11.404V5.77a.937.937 0 0 0-.937-.935h-.835v.468h.84c.26 0 .47.21.47.468v5.54c-.2-.09-.42-.14-.65-.13-.32 0-.49.08-.65.14-.13.06-.23.1-.47.1-.23 0-.33-.04-.47-.1-.2-.09-.42-.14-.65-.13-.32 0-.5.08-.65.14-.13.06-.23.1-.47.1a.973.973 0 0 1-.47-.1c-.2-.09-.42-.14-.65-.13-.32 0-.49.08-.65.14-.13.06-.23.1-.47.1a.912.912 0 0 1-.46-.1c-.15-.06-.32-.13-.65-.13s-.5.078-.65.14v.006-5.56c0-.26.21-.47.47-.47h1.23v-.47H4.65a.938.938 0 0 0-.937.937v6.104c.326 0 .5-.073.65-.136.13-.053.235-.1.47-.1.23 0 .336.047.47.1.15.066.32.138.65.138.324 0 .496-.073.65-.136.13-.053.234-.1.467-.1s.336.047.47.1c.15.066.32.138.65.138.325 0 .496-.07.65-.13.13-.052.234-.1.467-.1.232 0 .337.048.47.1.15.067.322.14.65.14.326 0 .497-.07.65-.136.13-.052.235-.1.468-.1.237 0 .34.048.47.1.15.067.327.14.65.14v-.466" fill="#FFF"/><path d="M10.793 5.727a2.53 2.53 0 1 1-5.06 0 2.53 2.53 0 0 1 5.06 0" fill="#981E32"/><path d="M8.268 3.303a2.387 2.387 0 0 0 0 4.771 2.389 2.389 0 0 0 2.385-2.386 2.389 2.389 0 0 0-2.386-2.385m0 5.24a2.857 2.857 0 0 1 0-5.714c1.574 0 2.853 1.28 2.853 2.85s-1.28 2.85-2.85 2.85" fill="#FFF"/><path d="M8.322 6.53c.258 0 .625-.065.625-.314 0-.55-1.75-.1-1.75-1.082 0-.455.466-.664.902-.704v-.34h.36v.345c.39.048.77.23.9.58l-.37.162c-.11-.257-.46-.35-.75-.35-.3 0-.6.084-.6.276 0 .52 1.73.114 1.73 1.083 0 .493-.46.738-.94.777v.293h-.36V6.96c-.5-.05-.85-.285-.97-.65l.38-.172c.092.262.5.393.803.393" fill="#FFF"/><path d="M8.158 7.197h.25V6.91l.054-.005c.426-.035.88-.242.88-.72 0-.51-.54-.604-1.017-.688-.368-.065-.716-.125-.716-.394 0-.246.35-.334.65-.334.29 0 .63.08.77.33l.26-.12c-.12-.26-.43-.45-.84-.5H8.4v-.33h-.25v.33H8.1c-.41.03-.85.22-.85.64 0 .51.54.6 1.014.68.38.06.737.12.737.4 0 .27-.35.37-.68.37-.32 0-.7-.13-.84-.38l-.28.12c.13.312.46.516.9.56l.06.004v.3zm.367.117H8.04V7.01c-.487-.06-.836-.31-.96-.683l-.018-.05.486-.22.022.06c.08.223.446.355.753.355.26 0 .566-.067.566-.256 0-.186-.3-.234-.64-.29-.5-.08-1.12-.18-1.12-.793 0-.478.47-.703.9-.755V4.03h.48v.353c.45.068.78.294.9.612l.02.05-.05.023c-.13.06-.26.114-.37.163l-.06.03-.02-.05c-.1-.23-.43-.31-.69-.31-.26 0-.54.07-.54.22 0 .17.28.22.62.28.49.09 1.11.2 1.11.81 0 .54-.5.78-.94.83v.3z" fill="#FFF"/></g></svg></span>
+              Pay a Bill
+            </a>
+          </li>
+          <li class="Header__help-option">
+            <a href="for-providers/refer-a-patient.html">
+              <span class="Icon Icon--refer"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#981E33" width="16" height="16" rx="8"/><path fill="#FFF" d="M4.103 11.453h8.05V5.261h-8.05z"/><path d="M11.698 11.763H4.593c-.43 0-.78-.31-.78-.69v-5.45c0-.38.35-.69.78-.69h.984v.454h-.984c-.175 0-.328.11-.328.236v5.45c0 .127.153.237.328.237h7.105c.174 0 .327-.11.327-.236V5.623c0-.126-.153-.236-.328-.236h-1.058v-.453h1.058c.43 0 .78.309.78.689v5.45c0 .38-.35.69-.78.69" fill="#FFF"/><path d="M6.688 9.25h-.035c-.046.163-.349.285-.574.285-.226 0-.528-.123-.575-.286H5.47c-.3 0-.546.245-.546.545v1.002c0 .054.044.098.098.098h2.115a.097.097 0 0 0 .097-.098V9.795c0-.3-.245-.546-.545-.546m.019-.8c0 .385-.277.696-.62.696-.342 0-.62-.311-.62-.696 0-.385.278-.696.62-.696.343 0 .62.311.62.696m4.236.801h-.035c-.046.163-.349.285-.574.285-.226 0-.528-.123-.575-.286h-.034c-.3 0-.546.245-.546.545v1.002c0 .054.044.098.097.098h2.115a.098.098 0 0 0 .098-.098V9.795c0-.3-.246-.546-.546-.546m.02-.8c0 .385-.277.696-.62.696-.342 0-.62-.311-.62-.696 0-.385.278-.696.62-.696.343 0 .62.311.62.696" fill="#981E32"/><path d="M10.694 5.747a2.521 2.521 0 1 1-5.042-.001 2.521 2.521 0 0 1 5.042.002" fill="#981E32"/><path d="M8.145 3.487a2.31 2.31 0 0 0-2.306 2.307A2.31 2.31 0 0 0 8.145 8.1c1.272 0 2.307-1.035 2.307-2.307S9.417 3.486 8.145 3.486m0 5.066c-1.521 0-2.759-1.238-2.759-2.76s1.238-2.759 2.76-2.759a2.762 2.762 0 0 1 2.759 2.76 2.762 2.762 0 0 1-2.76 2.76" fill="#FFF"/><path d="M8.437 4.578a.082.082 0 0 0-.132.065v.424c-.444.016-.8.16-1.059.428-.464.481-.446 1.185-.445 1.214a.082.082 0 0 0 .08.08h.002a.082.082 0 0 0 .082-.077c.003-.037.087-.907 1.341-.943v.421a.082.082 0 0 0 .132.066l1.02-.774a.082.082 0 0 0 0-.13l-1.021-.774z" fill="#FFF"/></g></svg></span>
+              Make a Referral
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main id="main-content" role="main">
+                      
+              
+    <section data-hero-home>
+      
+<section class="HeroImage HeroImage__overlay">
+  <div class="HeroImage__content">
+    
+    <div class="HeroImage__content--inner">
+      
+
+      <h1 class="HeroImage__title u-text-align-left">The place that skill built</h1>
+
+              <h3 class="HeroImage__description u-text-align-left">Highly skilled doctors make all the difference.</h3>
+      
+      
+      
+
+      <div class="HeroImage__callouts HeroImage__callouts--left">
+                  <div class="HeroImage__callout">
+            <a class="ButtonPrimary" href="find-providers.html"  target="_self">
+  Find a Doctor
+</a>
+
+          </div>
+              </div>
+    </div>
+  </div>
+
+  <picture>
+          <source srcset="https://cdn.iuhealth.org/heros/28179_1_IUH_SkillBuilt_Hmpg_BNR_2000x575_M_r1v3_NoTxt_v5.jpg" media="(min-width: 1500px)">
+          <source srcset="https://cdn.iuhealth.org/heros/_1500x600_crop_center-center_none/28179_1_IUH_SkillBuilt_Hmpg_BNR_2000x575_M_r1v3_NoTxt_v5.jpg" media="(min-width: 800px)">
+          <source srcset="https://cdn.iuhealth.org/heros/_800x400_crop_center-center_none/28179_1_IUH_SkillBuilt_Hmpg_BNR_2000x575_M_r1v3_NoTxt_v5.jpg" media="(min-width: 550px)">
+        <img
+      class="
+        HeroImage__image
+        block
+        max-w-none w-full
+        min-h-[300px] max-h-[300px] sm:min-h-0 sm:max-h-[768px]
+        object-cover sm:object-fill
+      "
+      src="../cdn.iuhealth.org/heros/_550x450_crop_center-center_none/28179_1_IUH_SkillBuilt_Hmpg_BNR_2000x575_M_r1v3_NoTxt_v5.jpg"
+      alt="The place that skill built"
+    >
+  </picture>
+</section>
+
+    </section>
+  
+    
+    <div data-personalized-find-providers-tile class="u-pb-1 u-mb-4 hidden">
+      <div>
+  <div class="TileHeader TileHeader--purple">
+  <div class="TileHeader__tile-wrap">
+    <div class="TileHeader__tiles">
+              <div class="TileHeader__tile TileHeader__tile--1"></div>
+              <div class="TileHeader__tile TileHeader__tile--2"></div>
+              <div class="TileHeader__tile TileHeader__tile--3"></div>
+              <div class="TileHeader__tile TileHeader__tile--4"></div>
+              <div class="TileHeader__tile TileHeader__tile--5"></div>
+          </div>
+  </div>
+</div>
+
+
+  <div class="-mt-40 relative">
+          <div class="Wrapper relative z-50">
+        <div
+          data-personalized-find-providers
+          data-multiple-query="true"
+          data-primary-element="hits"
+          data-type="providerGrid"
+          data-loader-inverted="true"
+          class="lazyload"
+        >
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+    </div>
+
+  <div class="u-pb-4 u-mb-4">
+    
+    <div data-personalized-find-locations-tile class="hidden">
+      <div>
+  <div class="TileHeader TileHeader--orange">
+  <div class="TileHeader__tile-wrap">
+    <div class="TileHeader__tiles">
+              <div class="TileHeader__tile TileHeader__tile--1"></div>
+              <div class="TileHeader__tile TileHeader__tile--2"></div>
+              <div class="TileHeader__tile TileHeader__tile--3"></div>
+              <div class="TileHeader__tile TileHeader__tile--4"></div>
+              <div class="TileHeader__tile TileHeader__tile--5"></div>
+          </div>
+  </div>
+</div>
+
+
+  <div class="-mt-40 relative">
+          <div class="Wrapper relative z-50">
+        <div
+          data-personalized-find-locations
+          data-primary-element="hits"
+          data-total-hits="3"
+          data-type="locationGrid"
+          data-fallback="closest"
+          data-loader-inverted="true"
+          class="lazyload"
+        >
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+    </div>
+  </div>
+
+        <section class="FullWidthCallout">
+  <div class="FullWidthCallout__wrap Wrapper">
+    <div class="FullWidthCallout__image">
+      <img src="../cdn.iuhealth.org/callouts/callout_covid19.jpg" alt="Latest COVID-19 Updates" >
+    </div>
+    <div class="FullWidthCallout__box">
+      <div class="col col-12 col-md-4">
+        <div class="FullWidthCallout__content">
+          <h2 class="u-text-white u-mb-half">Latest COVID-19 Updates</h2>
+          <p>Find the resources and information you need about COVID-19. Our COVID-19 Resource Center provides the latest on vaccines, testing and our visitor guidelines.</p>
+
+          <a class="ButtonSecondary ButtonSecondary--inverted" href="covid19.html" >
+  Visit COVID-19 Resource Center </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <div class="Wrapper">
+    <include-fragment src="related/news-events.html">
+      <div class="mt-24 mb-20 text-center">
+        <div class="Loader">
+  <div class="Loader__dot Loader__dot--1"></div>
+  <div class="Loader__dot Loader__dot--2"></div>
+  <div class="Loader__dot Loader__dot--3"></div>
+</div>
+
+      </div>
+    </include-fragment>
+  </div>
+  </main>
+
+  <footer class="Footer">
+  <div class="Footer__wrapper">
+    <div class="Footer__intro-wrap">
+      <div class="Footer__intro">
+                  <img class="Footer__logo lazyload" data-src="../iuhealth.org/images/logo.jpeg" alt="Indiana University Health">
+                <h5 class="Footer__heading">For General Information</h5>
+
+        <a class="Footer__phone" href="">XXXX XXXX XXX</a>
+        <span class="Footer__phone-numeric">XXXX XXXXX XXX</span>
+      </div>
+
+      <nav class="Footer__sitemap">
+        <ul class="Footer__sitemap-column">
+          <li><a href="about-our-system.html">About Our System</a></li>
+          <li><a href="in-the-community.html">In The Community</a></li>
+          <li><a href="about-our-system/diversity-equity-inclusion.html">Diversity & Inclusion</a></li>
+          <li><a href="https://careers.iuhealth.org/" target="_blank">Careers</a></li>
+          <li><a href="iu-health-foundation.html">IU Health Foundation</a></li>
+        </ul>
+
+        <ul class="Footer__sitemap-column">
+          <li><a href="patient-family-support.html">Patient Resources</a></li>
+          <li><a href="business-solutions.html">Business Solutions</a></li>
+          <li><a href="https://iuhealthplans.org/" target="_blank">IU Health Plans</a></li>
+          <li><a href="thrive.html" class="thrive">Thrive <span>by IU Health</span></a></li>
+        </ul>
+
+        <ul class="Footer__sitemap-column">
+          <li><a href="for-researchers.html">For Researchers</a></li>
+          <li><a href="for-providers.html">For Providers</a></li>
+          <li><a href="professional-education.html">Professional Education</a></li>
+          <li><a href="for-media.html">For Media</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <h5 class="Footer__heading">Connect With IU Health</h5>
+    <ul class="Footer__social">
+              <li>
+          <a href="https://facebook.com/IUHealth" target="_blank">
+            <span class="sr-only">Find IU Health on Facebook</span>
+            <span class="Icon Icon--facebook"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" fill="#3B5998"/><path d="M8.567 12.437V8.085H9.77l.158-1.5h-1.36v-.75c0-.392.038-.602.6-.602h.75v-1.5h-1.2c-1.444 0-1.952.728-1.952 1.952v.9h-.9v1.5h.9v4.352h1.8z" fill="#FFF"/></g></svg></span>
+          </a>
+        </li>
+              <li>
+          <a href="https://twitter.com/IU_Health" target="_blank">
+            <span class="sr-only">Find IU Health on Twitter</span>
+            <span class="Icon Icon--twitter"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" fill="#55ACEE"/><path d="M7.76 6.503l.017.276-.28-.04C6.48 6.61 5.59 6.17 4.834 5.43l-.37-.366-.095.27c-.21.605-.08 1.244.34 1.673.22.237.17.27-.21.13-.14-.045-.25-.08-.27-.06-.04.037.094.55.2.755.146.282.442.56.77.723l.27.13-.325.003c-.313 0-.324.006-.29.125.11.366.553.756 1.046.925l.347.12-.3.18c-.45.26-.976.407-1.5.42-.254.005-.46.03-.46.045 0 .056.682.373 1.08.497 1.19.367 2.607.21 3.67-.418.755-.446 1.51-1.333 1.863-2.192.19-.458.38-1.294.38-1.695 0-.26.02-.294.33-.604a4.3 4.3 0 0 0 .395-.43c.058-.11.05-.11-.233-.01-.478.17-.545.15-.31-.11.173-.18.38-.502.38-.6 0-.015-.084.01-.18.06-.1.058-.323.14-.49.19l-.303.1-.27-.19c-.15-.1-.36-.212-.475-.246-.285-.08-.72-.07-.978.02-.7.257-1.146.91-1.096 1.63z" fill="#FFF"/></g></svg></span>
+          </a>
+        </li>
+              <li>
+          <a href="https://instagram.com/iu_health/" target="_blank">
+            <span class="sr-only">Find IU Health on Instagram</span>
+            <span class="Icon Icon--instagram"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient x1="17.939%" y1="15.466%" x2="83.162%" y2="85.204%" id="b"><stop stop-color="#395DFA" offset="0%"/><stop stop-color="#544CED" offset="21.653%"/><stop stop-color="#903ACD" offset="44.764%"/><stop stop-color="#D53592" offset="68.339%"/><stop stop-color="#F4306D" offset="100%"/></linearGradient><circle id="a" cx="8" cy="8" r="8"/><filter x="-1120.5%" y="-1120.5%" width="2341%" height="2341%" filterUnits="objectBoundingBox" id="c"><feGaussianBlur stdDeviation="50" in="SourceGraphic"/></filter><filter x="-651.3%" y="-651.3%" width="1402.5%" height="1402.5%" filterUnits="objectBoundingBox" id="e"><feGaussianBlur stdDeviation="24" in="SourceGraphic"/></filter><filter x="-693.3%" y="-693.3%" width="1486.5%" height="1486.5%" filterUnits="objectBoundingBox" id="f"><feGaussianBlur stdDeviation="21.274" in="SourceGraphic"/></filter><filter x="-882.3%" y="-882.3%" width="1864.5%" height="1864.5%" filterUnits="objectBoundingBox" id="g"><feGaussianBlur stdDeviation="24" in="SourceGraphic"/></filter><filter x="-2039.9%" y="-2039.9%" width="4179.7%" height="4179.7%" filterUnits="objectBoundingBox" id="h"><feGaussianBlur stdDeviation="48.382" in="SourceGraphic"/></filter></defs><g fill="none" fill-rule="evenodd"><mask id="d" fill="#fff"><use xlink:href="#a"/></mask><use fill="url(#b)" xlink:href="#a"/><circle fill="#F8443E" filter="url(#c)" mask="url(#d)" cx="5.729" cy="13.286" r="6.693"/><circle fill="#F86737" filter="url(#e)" mask="url(#d)" cx="5.568" cy="14.412" r="5.528"/><circle fill="#F88330" filter="url(#f)" mask="url(#d)" cx="5.688" cy="14.492" r="4.603"/><circle fill="#FBBB45" filter="url(#g)" mask="url(#d)" cx="5.688" cy="15.015" r="4.08"/><circle fill="#FBE18A" filter="url(#h)" mask="url(#d)" cx="5.648" cy="15.538" r="3.558"/><path d="M7.98 3.17c-1.317 0-1.482.005-2 .028-.516.024-.87.106-1.177.226-.32.124-.59.29-.86.56-.27.27-.435.54-.56.858-.12.31-.202.662-.225 1.178-.023.517-.03.683-.03 2 0 1.318.007 1.482.03 2 .024.516.106.87.226 1.177.124.32.29.59.56.86.27.27.54.436.858.56.31.12.66.2 1.178.225.517.023.682.03 2 .03 1.317 0 1.482-.007 2-.03.516-.024.87-.106 1.178-.226.32-.123.59-.29.858-.56.27-.27.436-.54.56-.86.12-.307.2-.66.226-1.176.023-.517.03-.682.03-2 0-1.317-.007-1.483-.03-2-.025-.517-.107-.87-.226-1.178-.124-.32-.29-.59-.56-.86-.27-.27-.54-.434-.86-.558-.308-.12-.66-.202-1.177-.226-.52-.023-.69-.03-2-.03zm-.435.873h.435c1.296 0 1.45.005 1.96.028.474.03.73.11.9.17.228.09.39.2.56.37.168.17.274.34.362.56.066.17.145.43.167.9.02.51.02.67.02 1.96s-.01 1.45-.03 1.96c-.03.47-.1.73-.17.9-.09.23-.2.39-.37.56-.17.17-.33.28-.56.37-.17.07-.43.15-.9.17-.51.02-.67.03-1.96.03-1.3 0-1.45-.01-1.96-.03-.48-.02-.73-.1-.9-.17-.23-.09-.39-.192-.56-.362-.17-.17-.28-.33-.36-.557-.07-.174-.15-.43-.17-.904-.02-.51-.03-.665-.03-1.96 0-1.296.002-1.45.03-1.96.02-.473.1-.73.163-.9.087-.227.193-.39.362-.56.17-.17.33-.274.56-.362.17-.065.425-.144.9-.166.446-.02.62-.03 1.523-.03zm3.025.806a.58.58 0 1 0-.002 1.162.58.58 0 0 0 .002-1.162zm-2.59.68a2.487 2.487 0 0 0-2.49 2.49c0 1.37 1.115 2.49 2.49 2.49 1.376 0 2.49-1.12 2.49-2.49 0-1.38-1.114-2.49-2.49-2.49zm0 .87c.893 0 1.617.72 1.617 1.61S8.873 9.63 7.98 9.63a1.616 1.616 0 1 1 0-3.23z" fill="#FFF" mask="url(#d)"/></g></svg></span>
+          </a>
+        </li>
+              <li>
+          <a href="https://linkedin.com/company/indiana-university-health" target="_blank">
+            <span class="sr-only">Find IU Health on LinkedIn</span>
+            <span class="Icon Icon--linkedin"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" fill="#0077B5"/><path d="M5.654 6.626v5.447H3.84V6.626h1.814zm.12-1.685c0 .525-.395.943-1.027.943h-.012c-.608 0-1.002-.418-1.002-.94C3.733 4.406 4.14 4 4.76 4s1 .407 1.013.94zm6.418 4.01v3.124H10.38V9.16c0-.733-.264-1.233-.92-1.233-.5 0-.8.337-.93.662-.048.115-.06.277-.06.44v3.042H6.657s.024-4.936 0-5.447H8.47v.772c.24-.37.672-.9 1.634-.9 1.193 0 2.088.78 2.088 2.452z" fill="#FFF"/></g></svg></span>
+          </a>
+        </li>
+              <li>
+          <a href="https://youtube.com/iuhealth" target="_blank">
+            <span class="sr-only">Find IU Health on YouTube</span>
+            <span class="Icon Icon--youtube"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 7.87C0 3.522 3.528 0 7.88 0s7.88 3.523 7.88 7.87c0 4.345-3.528 7.868-7.88 7.868S0 12.215 0 7.868z" fill="#CE1312"/><path d="M11.982 6.285s-.082-.59-.334-.85c-.32-.343-.677-.345-.84-.365-1.175-.086-2.937-.086-2.937-.086s-1.76 0-2.934.086c-.164.02-.52.022-.84.364-.252.26-.334.85-.334.85s-.083.695-.083 1.39v.65c0 .694.083 1.388.083 1.388s.083.59.334.85c.32.343.74.332.926.368.67.066 2.853.086 2.853.086s1.763-.002 2.937-.09c.164-.02.522-.02.84-.363.253-.26.335-.85.335-.85s.084-.695.084-1.39v-.65c0-.694-.086-1.388-.086-1.388z" fill="#FFF"/><path fill="#CE1312" d="M7.002 9.113v-2.41l2.268 1.21z"/></g></svg></span>
+          </a>
+        </li>
+              <li>
+          <a href="https://www.pinterest.com/IU_Health/" target="_blank">
+            <span class="sr-only">Find IU Health on Pinterest</span>
+            <span class="Icon Icon--pinterest"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M7.987 15.828C3.575 15.828 0 12.308 0 7.965 0 3.623 3.575.103 7.987.103c4.41 0 7.987 3.52 7.987 7.862 0 4.342-3.576 7.863-7.987 7.863z" fill="#FFF"/><path d="M7.977.84C3.98.84.74 4.03.74 7.965c0 3.018 1.907 5.597 4.6 6.635-.064-.563-.12-1.428.025-2.045.13-.555.848-3.54.848-3.54s-.216-.428-.216-1.058c0-.992.582-1.73 1.31-1.73.616 0 .915.456.915 1.003 0 .61-.395 1.525-.6 2.372-.17.71.362 1.288 1.072 1.288 1.287 0 2.276-1.336 2.276-3.263 0-1.707-1.245-2.9-3.024-2.9-2.06 0-3.267 1.522-3.267 3.093 0 .612.236 1.27.536 1.626a.21.21 0 0 1 .05.205c-.055.227-.177.71-.2.81-.033.13-.106.158-.244.096-.903-.415-1.468-1.717-1.468-2.76 0-2.248 1.66-4.313 4.782-4.313 2.51 0 4.462 1.76 4.462 4.115 0 2.456-1.574 4.432-3.756 4.432-.734 0-1.424-.377-1.66-.82l-.45 1.694c-.164.62-.605 1.395-.9 1.868a7.315 7.315 0 0 0 2.143.318c3.998 0 7.238-3.19 7.238-7.125 0-3.936-3.24-7.125-7.238-7.125" fill="#BD081C"/></g></svg></span>
+          </a>
+        </li>
+            <li>
+        <a href="rss-feeds.html">
+          <span class="sr-only">RSS</span>
+          <span class="Icon Icon--rss"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" fill="#F8991D"/><path d="M4.8 10.133a1.066 1.066 0 1 1 2.132 0 1.066 1.066 0 0 1-2.132 0zm7.467 1.067h-1.422A6.052 6.052 0 0 0 4.8 5.155V3.733c4.117 0 7.467 3.35 7.467 7.467zm-2.49 0h-1.42A3.56 3.56 0 0 0 4.8 7.645V6.222A4.983 4.983 0 0 1 9.778 11.2z" fill="#FFF"/></g></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://cloud.iuhealthemail.org/preferencecenter" target="_blank">
+          <span class="sr-only">eNewsletter</span>
+          <span class="Icon Icon--enewsletter"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" fill="#981E33"/><path d="M10.888 5.866H5.112v4.266h5.776V5.865zm0 5.333H5.112c-.53 0-.962-.48-.962-1.07V5.865c0-.59.43-1.067.962-1.067h5.776c.532 0 .962.474.962 1.064v4.266c0 .59-.43 1.07-.962 1.07z" fill="#FFF" fill-rule="nonzero"/><path d="M5.42 5.456a.45.45 0 0 0-.678.068.575.575 0 0 0 .062.752l2.888 2.666a.445.445 0 0 0 .616 0l2.888-2.666a.575.575 0 0 0 .062-.752.45.45 0 0 0-.678-.068L8 7.838 5.42 5.456z" fill="#FFF" fill-rule="nonzero"/></g></svg></span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="Footer__closing">
+      <p class="Footer__copyright">&copy; 2022  <a href="https://www.myknot.club/">MyKnot</a>, Inc. All Rights Reserved.</p>
+      <ul class="Footer__utility">
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="legal-notices.html">Legal Notices and HIPAA Notice of Privacy Practices</a></li>
+        <li><a href="contact-iu-health.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="-mb-7">
+    <div class="flex justify-center" x-data>
+  <button
+    class="bg-blue-deep flex justify-center items-center rounded-full w-[50px] h-[50px]"
+    title="Scroll Back To Top"
+    @click="
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    "
+  >
+    <svg class="w-9 h-9 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+  </button>
+</div>
+
+  </div>
+
+  <div class="Footer__outro">
+    <div class="Footer__outro-wrap Footer__wrapper">
+      <div class="Footer__nondiscrimination">
+        <h6 class="Footer__heading Footer__heading--small Footer__heading--languages"><a href="legal-notices/non-discrimination-notice.html">Non-discrimination Notice</a></h6>
+        <ul class="Footer__languages">
+          <li><a href="legal-notices/non-discrimination-notice.html#block-english">English</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-spanish">Español</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-french">Français</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-burmese">Burmese</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-pennsylvania-dutch">Pennsilfaanisch Deitsch</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-chinese">中文</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-dutch">Nederlands</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-german">Deutsch</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-hakha-chin">Hakha</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-japanese">日本語</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-karen">Karen</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-korean">한국어</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-russian">Русский</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-tagalog">Tagalog</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-vietnamese">Tiếng Việt</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-arabic">العربية</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-hindi">हिंदी</a></li>
+          <li><a href="legal-notices/non-discrimination-notice.html#block-punjabi">ਪੰਜਾਬੀ</a></li>
+        </ul>
+      </div>
+
+      <ul class="Footer__affiliates">
+        <li>
+          <a href="https://www.rileychildrens.org/" target="_blank">
+                          <img class="lazyload" data-src="https://cdn.iuhealth.org/images/logo-riley.svg" alt="Riley Children's Health">
+                      </a>
+        </li>
+        <li>
+          <a href="https://medicine.iu.edu/" target="_blank">
+                          <img class="lazyload" data-src="../iuhealth.org/images/logo.jpeg" alt="IU School of Medicine">
+                      </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </footer>
+
+
+        <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TKJZZHC');
+    </script>
+    
+    <script>
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push({type: "cookieExpiration", cookieExpirationDays: 90});
+  </script>
+
+  <script src="../cdn.optimizely.com/js/8358272911.js"></script>
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKJZZHC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  <script type="text/javascript" src="../cdn.iuhealth.org/bundle/main.bundle9a82.js?v=12c2e03" async></script>
+
+  
+    <script src="../unpkg.com/htmx.org%401.7.0/dist/htmx.min.js" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous"></script>
+<script src="cpresources/25d4ca46/access30d0.js?v=1665897311" defer></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1f6c0002aa","applicationID":"556102486","transactionName":"NlBQNhEAXUAAAhIPDQ8aZxAKTlpdBQQeSBIJRQ==","queueTime":0,"applicationTime":288,"atts":"GhdTQFkaTk4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from iuhealth.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Oct 2022 07:27:02 GMT -->
+</html>
+<!-- Cached by Blitz on 2022-10-16T01:15:24-04:00 --><!-- Served by Blitz on 2022-10-16T03:27:12-04:00 -->
